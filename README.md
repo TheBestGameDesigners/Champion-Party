@@ -23,7 +23,7 @@ Planteamos entonces Champion's Party como un top-down shooter 2d mezclado con al
 
 Champion's Party se desarrollará entonces sobre un solo mapa de tamaño mediano/grande “libre” en el que tenemos que cumplir una serie de objetivos para poder “ganar” el juego. Estos objetivos varían y en un principio no serán muy complejos:
 
-matar “x” enemigos.
+matar “x” enemigoos.
 sobrevivir “x” tiempo.
 conseguir “x” objeto.
 combinaciones de los anteriores
