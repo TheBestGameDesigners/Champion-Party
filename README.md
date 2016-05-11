@@ -56,6 +56,8 @@ Mecánicas Centrales
 
 ## Referentes: 
 
+**Hotline Miami**: Top down shooter 2d, similar al nuestro con un diseño de juego mas frenético y menos libre.
+
 **The Binding of Isaac**: Roguelite top-down-shooter por excelencia totalmente aleatorio en el que tienes que pasar niveles y eliminar bosses mientras te equipas.
 
 **Project zomboid**: Survival isométrico que tiene parte también de algunos elementos básicos que tiene nuestro juego como el de desarrollar la acción sobre un mapa en el que los spots de zombies, comportamiento y loot varían en cada partida.
