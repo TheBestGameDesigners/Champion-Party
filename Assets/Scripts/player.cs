@@ -4,7 +4,7 @@ using System.Collections;
 public class player : MonoBehaviour {
 	
 	static public player S; //singleton
-	
+	private Rigidbody2D body;
 	public float speed = 100;
 	public Bounds bounds;
 	
@@ -18,7 +18,7 @@ public class player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		body = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -33,17 +33,11 @@ public class player : MonoBehaviour {
 	       
 	        transform.position = pos;
 
-		
 	}
 
-	 void OnCollisionEnter2D(Collision2D coll) {
-        
-        	Destroy(coll.gameObject);
-             this.GetComponent<Rigidbody>().isKinematic = false;
-        
-    }
 
     void OnTriggerEnter2D(Collider2D other){
     	Debug.Log("me he dado");
+    	body.AddForce(-Vector3.left * -3000);
     }
 }
