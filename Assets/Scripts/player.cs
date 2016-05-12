@@ -37,9 +37,13 @@ public class player : MonoBehaviour {
 	}
 
 	 void OnCollisionEnter2D(Collision2D coll) {
-        if (coll.gameObject.name == "collision")
-        		Destroy(coll.gameObject);
+        
+        	Destroy(coll.gameObject);
              this.GetComponent<Rigidbody>().isKinematic = false;
         
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
+    	Debug.Log("me he dado");
     }
 }
