@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 11/05/2016 16:14:21-->
+<!--Last exported: 12/05/2016 15:30:20-->
 <Tiled2Unity version="1.0.5.1">
   <AssignMaterial mesh="mesh_0001" material="tilesheet_complete" />
   <AssignMaterial mesh="mesh_0002" material="Other" />
@@ -21,6 +21,18 @@
     </GameObject>
     <GameObject name="colision" x="0" y="0">
       <GameObject name="tilesheet_complete" copy="mesh_0004" sortingLayerName="" sortingOrder="2" opacity="1" />
+      <GameObject name="Collision">
+        <PolygonCollider2D>
+          <Path>1151,-2430 1089,-2430 1089,-2494 1151,-2494</Path>
+          <Path>703,-2432 640,-2432 640,-2493 703,-2493</Path>
+          <Path>767,-2432 704,-2432 704,-2493 767,-2493</Path>
+          <Path>895,-2432 832,-2432 832,-2493 895,-2493</Path>
+          <Path>959,-2432 896,-2432 896,-2493 959,-2493</Path>
+          <Path>1023,-2432 960,-2432 960,-2493 1023,-2493</Path>
+          <Path>1087,-2432 1024,-2432 1024,-2493 1087,-2493</Path>
+          <Path>576,-2493 639,-2493 639,-2432 514,-2432 514,-2494 576,-2494</Path>
+        </PolygonCollider2D>
+      </GameObject>
       <Property name="collision" value="true" />
     </GameObject>
     <GameObject name="objetos" x="0" y="0">

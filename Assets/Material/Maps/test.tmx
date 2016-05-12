@@ -2,6 +2,21 @@
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="64" tileheight="64" nextobjectid="20">
  <tileset firstgid="1" name="landscape" tilewidth="64" tileheight="64" tilecount="540" columns="27">
   <image source="../2dArt/Topdown Shooter (620 assets)/Tilesheet/tilesheet_complete.png" width="1728" height="1280"/>
+  <tile id="281">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="63" height="61"/>
+   </objectgroup>
+  </tile>
+  <tile id="306">
+   <objectgroup draworder="index">
+    <object id="1" x="2" y="0" width="62" height="62"/>
+   </objectgroup>
+  </tile>
+  <tile id="307">
+   <objectgroup draworder="index">
+    <object id="1" x="1" y="-2" width="62" height="64"/>
+   </objectgroup>
+  </tile>
   <tile id="476">
    <objectgroup draworder="index">
     <object id="1" x="-1" y="-10" width="68" height="72"/>
