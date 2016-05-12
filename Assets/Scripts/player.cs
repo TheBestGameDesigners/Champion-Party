@@ -5,7 +5,7 @@ public class player : MonoBehaviour {
 	
 	static public player S; //singleton
 	
-	public float speed = 30;
+	public float speed = 100;
 	public Bounds bounds;
 	
 	
