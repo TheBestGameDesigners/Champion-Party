@@ -35,4 +35,11 @@ public class player : MonoBehaviour {
 
 		
 	}
+
+	 void OnCollisionEnter2D(Collision2D coll) {
+        if (coll.gameObject.name == "collision")
+        		Destroy(coll.gameObject);
+             this.GetComponent<Rigidbody>().isKinematic = false;
+        
+    }
 }
