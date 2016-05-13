@@ -33,7 +33,7 @@ public class cameraMove : MonoBehaviour
         borderDown = cameraPos.y + height / 2;
     }
 
-    void Update()
+    void FixedUpdate ()
     {
         Vector3 v3 = player.transform.position;
 
