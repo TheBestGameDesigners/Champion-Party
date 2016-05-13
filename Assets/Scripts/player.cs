@@ -6,6 +6,7 @@ public class player : MonoBehaviour {
 	static public player S; //singleton
 	private Rigidbody2D body;
 	public float speed = 100;
+    private float oldSpeed;
 	public Bounds bounds;
 	
 	 void Awake()
@@ -22,25 +23,31 @@ public class player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+            float xAxis = Input.GetAxis("Horizontal");
+            float yAxis = Input.GetAxis("Vertical");
 
-		float xAxis = Input.GetAxis("Horizontal");
-	    float yAxis = Input.GetAxis("Vertical");
+            Vector3 pos = transform.position;
+            pos.x += xAxis * speed * Time.deltaTime;
+            pos.y += yAxis * speed * Time.deltaTime;
 
-        Vector3 pos = transform.position;
-	     pos.x += xAxis * speed * Time.deltaTime;
-	     pos.y += yAxis * speed * Time.deltaTime;
-	    
-	       
-	     transform.position = pos;
-        // Rotate player
-        var objectPos = Camera.main.WorldToScreenPoint(transform.position);
-        var dir = Input.mousePosition - objectPos;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg));
+
+            transform.position = pos;
+            // Rotate player
+            var objectPos = Camera.main.WorldToScreenPoint(transform.position);
+            var dir = Input.mousePosition - objectPos;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg));
     }
 
 
     void OnTriggerEnter2D(Collider2D other){
     	Debug.Log("me he dado");
-    	body.AddForce(-Vector3.left * -3000);
+        oldSpeed = speed;
+        speed = 0;
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        speed = oldSpeed;
+        Debug.Log("me he dejado de dar");
     }
 }

@@ -14,7 +14,6 @@ public class cameraMove : MonoBehaviour
     private float borderRigth;
     private float borderUp;
     private float borderDown;
-    private bool first;
 
     void Start()
     {
@@ -24,7 +23,6 @@ public class cameraMove : MonoBehaviour
         width = height * cam.aspect;
         resetBorders();
         oldPosition = player.transform.position;
-        first = true;
     }
 
     void resetBorders(){
