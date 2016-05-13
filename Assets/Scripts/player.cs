@@ -41,13 +41,14 @@ public class player : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other){
     	Debug.Log("me he dado");
-        oldSpeed = speed;
-        speed = 0;
+        body.AddForce(Vector3.left * 10000);
+        
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        speed = oldSpeed;
+        body.AddForce(Vector3.right * 10000);
         Debug.Log("me he dejado de dar");
+
     }
 }
