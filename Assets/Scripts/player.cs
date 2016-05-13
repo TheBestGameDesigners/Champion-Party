@@ -7,8 +7,6 @@ public class player : MonoBehaviour {
 	private Rigidbody2D body;
 	public float speed = 100;
 	public Bounds bounds;
-
-    private Vector2 vDir;
 	
 	 void Awake()
 	 {
@@ -31,7 +29,7 @@ public class player : MonoBehaviour {
         Vector3 pos = transform.position;
 	     pos.x += xAxis * speed * Time.deltaTime;
 	     pos.y += yAxis * speed * Time.deltaTime;
-	
+	    
 	       
 	     transform.position = pos;
         // Rotate player
