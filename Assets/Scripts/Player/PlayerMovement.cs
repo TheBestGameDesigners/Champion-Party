@@ -2,9 +2,8 @@
 using System.Collections;
 
 
-public class player : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour {
 	
-	static public player S; //singleton
 	private Rigidbody2D body;
 	public float speed = 100;
     public Bounds bounds;
@@ -13,7 +12,6 @@ public class player : MonoBehaviour {
 	
 	 void Awake()
 	 {
-	        S = this; //set the Singleton
 	        bounds = Utils.CombineBoundsOfChildren(this.gameObject);
             direction = new Vector2();
     	}
